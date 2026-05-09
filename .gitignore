@@ -1,0 +1,16 @@
+# Claude Code
+.claude/settings.local.json
+.claude/worktrees/
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# macOS
+.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
