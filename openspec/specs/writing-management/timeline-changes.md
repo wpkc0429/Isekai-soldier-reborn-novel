@@ -77,3 +77,32 @@
 - F012（賽門察覺有人提供消息）
 - F014/F015（武者覺醒對塔利的揭露時機）
 - F017（被找到的時間表已不在主角手上）
+
+---
+
+## 第二次架構審查備忘（vol1-review-and-architecture-audit 完成於 2026-05-10）
+
+依 `openspec/audits/vol1-2026-05/audit.md` 與 `action-plan.md`：
+
+**P0 三項已執行**：
+- Chapter Brief 整併（pre-chapter-checklist + ai-session-brief 合併為單頁）
+- chapter-sync.md（合併 post-chapter-sync 5 問與 mini-sync 5 欄位 + §B.6 開放欄）
+- foreshadowing 截止日欄（tracker 與 list 各加「最遲揭露章」+ alert 規則）
+
+**P1 兩項已執行（含使用者分裂決策）**：
+- P1-A 分裂：
+  - 知情狀態 = `info-asymmetry-table.md` 為檔案級 SSOT（其他檔案知情欄改 link 或加 scope 註記）
+  - 年齡/位置/能力 = `character-state-cards.md` 為欄位級擁有者；其他檔案保留副本；`tools/state_validator.py` 驗證一致性（v1 基線 44 個潛在不一致，多為前世/離家年齡偽陽性）
+- P1-B：55 章正文 git mv 至 `manuscript/vol1/`；`specs/vol1-chapters/` 改為純 metadata 目錄（含 `index.md` 與 `tools/build_vol1_index.py`）
+
+**P2 三項已 inline 進 Chapter Brief Template**：
+- 第二卷必須安排 ≥ 2 次「主角會失敗」場景
+- 賽門 / 艾拉前 20 章內各有一次完整的「正面戲」
+- 替「他把這個收進去」找替代收束工具
+
+**Vol2 ch10 checkpoint 待評估清單**（記入 `volume-outline-template.md` ch10 段）：
+glossary 三欄、scene-beat、voice-corpus、emotion-distance、規則正反對照、spec 瘦身（用引用率掃描）、自動化腳本擴充
+
+**新增的 audit / 工具不進 spec 樹**：
+- `openspec/audits/vol1-2026-05/audit.md`、`action-plan.md`
+- `tools/state_validator.py`、`build_vol1_index.py`、`README.md`、`output/state-mismatches.txt`

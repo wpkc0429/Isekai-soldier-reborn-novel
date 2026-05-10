@@ -22,7 +22,16 @@ openspec/specs/               ← 所有設定文件（已發布）
 ├── magic-power-system/       ← 力量體系與覺醒機制
 ├── plot-structure/           ← 各卷章節大綱、伏筆清單、感情線
 ├── writing-style-guide/      ← 寫作規範、名詞對照表、試寫稿
-└── writing-management/       ← 撰寫管理模板（日誌、日曆、角色狀態卡等）
+├── writing-management/       ← 撰寫管理模板（日誌、日曆、角色狀態卡等）
+└── vol1-chapters/            ← 純 metadata 索引（正文不在這裡）
+
+manuscript/                   ← 章節正文（依 vol1-2026-05 audit P1-B）
+└── vol1/                     ← 第一卷 55 章 ch001.md – ch055.md
+
+openspec/audits/              ← 時點性診斷快照（不進 spec 樹）
+└── vol1-2026-05/             ← 第一卷品質與架構審查（audit + action-plan）
+
+tools/                        ← 驗證腳本（state_validator、build_vol1_index）
 ```
 
 ---
@@ -55,10 +64,15 @@ openspec/specs/               ← 所有設定文件（已發布）
 
 ## 開始寫一章前必做
 
-1. 查 `openspec/specs/writing-management/pre-chapter-checklist.md`（5項確認）
-2. 查 `openspec/specs/writing-management/character-state-cards.md`（確認人物當前狀態）
-3. 查 `openspec/specs/writing-management/info-asymmetry-table.md`（確認角色知道什麼）
-4. 填寫 `openspec/specs/writing-management/ai-session-brief.md` 的模板，作為工作階段的背景資料
+**填一張 Chapter Brief**：`openspec/specs/writing-management/ai-session-brief.md`（單頁，含上半段 brief + 下半段 7 項硬性確認 + 本卷重點提醒）。
+
+引用的兩個 SSOT：
+- `character-state-cards.md` —— 人物年齡 / 位置 / 能力（欄位級擁有者）
+- `info-asymmetry-table.md` —— 知情狀態（檔案級 SSOT）
+
+## 章寫完後必做
+
+跑 `openspec/specs/writing-management/chapter-sync.md` §A 的 5 題 quick 版（5 分鐘 reverse-pass）。每 10 章跑一次 §B 的 full 版。
 
 ---
 

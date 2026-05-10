@@ -1,11 +1,16 @@
 # 核心人物狀態卡——初始版本
 
+> **欄位級擁有權聲明（2026-05-10 起）**：
+> - 本檔案是「年齡 / 位置 / 能力等級」三個欄位的**擁有者**——其他檔案保留各自副本（方便閱讀），但跑 `tools/state_validator.py` 時以本檔案為準
+> - 「知道主角的秘密 / 對主角的信任程度」欄已改為 link 指向 `info-asymmetry-table.md`（該檔案是知情狀態的檔案級 SSOT）
+> - 變動工作流：寫作中發現某人物年齡/位置/能力與本檔案不一致時，**先更新本檔案的「人類可讀段」與下方「機器可讀資料」段，再跑 `tools/state_validator.py` 確認其他副本一致**
+
 ## 用途
 
 記錄全書開始時（第一卷第一章）各核心人物的初始狀態。
 每一卷結束後更新，確保下一卷開始時的人物狀態準確。
 
-**格式**：人物 | 年齡 | 所在地 | 力量等級 | 當前目標 | 主角對他/她的信任程度 | 已知主角的秘密
+**格式**：人物 | 年齡 | 所在地 | 力量等級 | 當前目標 | 知道主角多少（→ info-asymmetry-table.md）
 
 ---
 
@@ -113,3 +118,72 @@
 | 賽門 | 14歲 | 格倫城費掌櫃商行 | 平民 | 已能獨立管帳；在格倫城商業圈有名字；開始察覺「有人在提供我消息」 | 第二卷：找合適的理由接觸他 |
 | 艾拉・布蘭 | 13歲 | 塔恩鎮附近藥鋪 | 平民 | 技法超出資歷；二度確認身份；主角只觀察未接觸 | 第二卷：等她更大，給她一個比藥鋪更大的環境 |
 | 安塔・費爾頓 | 53歲 | 格倫城 | 平民（靠代理人武力） | 繼續採購武器，收地，積累東境勢力；不知道主角存在 | 第三卷或更晚正面動；現在只是確認他在做什麼 |
+
+---
+
+## 機器可讀資料（state_validator.py 唯一來源）
+
+> **務必與上方人類可讀段同步更新**。tools/state_validator.py 讀取此 JSON 區塊，掃描其他檔案中的「年齡 / 位置 / 能力」副本，報告不一致。
+>
+> 格式：JSON 陣列，每筆人物含 `name` / `aliases`（用於模糊匹配）/ 各卷末快照 `volN_end`。
+
+```json
+{
+  "characters": [
+    {
+      "name": "艾登・莫爾",
+      "aliases": ["艾登", "莫爾"],
+      "vol1_start": {"age_text": "8歲", "location": "塔恩鎮", "power": "平民（兒童身體）"},
+      "vol1_end": {"age_text": "12歲", "location": "塔恩鎮", "power": "武者覺醒第一層（隱藏）"}
+    },
+    {
+      "name": "羅爾・莫爾",
+      "aliases": ["羅爾", "父親"],
+      "vol1_start": {"age_text": "38歲", "location": "塔恩鎮", "power": "平民"},
+      "vol1_end": {"age_text": "42歲", "location": "塔恩鎮", "power": "平民"}
+    },
+    {
+      "name": "艾拉・莫爾",
+      "aliases": ["艾拉・莫爾", "母親"],
+      "vol1_start": {"age_text": "35歲", "location": "塔恩鎮", "power": "平民"},
+      "vol1_end": {"age_text": "39歲", "location": "塔恩鎮", "power": "平民"}
+    },
+    {
+      "name": "莉亞・莫爾",
+      "aliases": ["莉亞", "妹妹"],
+      "vol1_start": {"age_text": "1歲多", "location": "塔恩鎮", "power": "平民（嬰幼兒）"},
+      "vol1_end": {"age_text": "約8歲", "location": "塔恩鎮", "power": "平民"}
+    },
+    {
+      "name": "梅拉・索恩",
+      "aliases": ["梅拉"],
+      "vol1_start": {"age_text": "9歲", "location": "塔恩鎮", "power": "平民"},
+      "vol1_end": {"age_text": "13歲", "location": "塔恩鎮藥鋪", "power": "平民"}
+    },
+    {
+      "name": "塔利",
+      "aliases": ["塔利"],
+      "vol1_start": {"age_text": "12歲", "location": "格倫城碼頭", "power": "平民（接近武者覺醒前）"},
+      "vol1_end": {"age_text": "16歲", "location": "塔恩鎮", "power": "武者覺醒前（強化訓練中，接近邊緣）"}
+    },
+    {
+      "name": "賽門",
+      "aliases": ["賽門"],
+      "vol1_start": {"age_text": "10歲", "location": "格倫城（商人學徒）", "power": "平民"},
+      "vol1_end": {"age_text": "14歲", "location": "格倫城費掌櫃商行", "power": "平民"}
+    },
+    {
+      "name": "艾拉・布蘭",
+      "aliases": ["艾拉・布蘭", "Ellara Bren"],
+      "vol1_start": {"age_text": "9歲", "location": "塔恩鎮附近藥鋪", "power": "平民"},
+      "vol1_end": {"age_text": "13歲", "location": "塔恩鎮附近藥鋪", "power": "平民"}
+    },
+    {
+      "name": "安塔・費爾頓",
+      "aliases": ["安塔", "安塔公爵", "費爾頓"],
+      "vol1_start": {"age_text": "49歲", "location": "格倫城", "power": "平民（靠代理人武力）"},
+      "vol1_end": {"age_text": "53歲", "location": "格倫城", "power": "平民（靠代理人武力）"}
+    }
+  ]
+}
+```

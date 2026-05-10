@@ -1,0 +1,184 @@
+# state_validator 報告
+
+來源：openspec\specs\writing-management\character-state-cards.md
+掃描目標數：11
+發現潛在不一致：44
+
+## 潛在不一致清單
+
+- [艾登・莫爾] openspec/specs/protagonist-settings/spec.md:26
+    found 8 歲（source vol1_end=12 歲）
+    context: **姓名**：艾登・莫爾（Aiden Morr）——同一個人，重生到8歲時的自己
+
+- [艾登・莫爾] openspec/specs/protagonist-settings/spec.md:8
+    found 22 歲（source vol1_end=12 歲）
+    context: - 22歲：石河谷之戰，全軍覆沒，艾登陣亡
+
+- [艾登・莫爾] openspec/specs/protagonist-settings/spec.md:26
+    found 8 歲（source vol1_end=12 歲）
+    context: **姓名**：艾登・莫爾（Aiden Morr）——同一個人，重生到8歲時的自己
+
+- [艾登・莫爾] openspec/specs/protagonist-settings/spec.md:30
+    found 15 歲（source vol1_end=12 歲）
+    context: - **父親 羅爾・莫爾**：塔恩鎮的車夫，勤懇老實，沒有大志，對兒子寄予普通期望（別餓死就好）。不善言辭但心腸好，前世在艾登15歲時去世（本世需要改變）
+
+- [艾登・莫爾] openspec/specs/protagonist-settings/spec.md:26
+    found 8 歲（source vol1_end=12 歲）
+    context: **姓名**：艾登・莫爾（Aiden Morr）——同一個人，重生到8歲時的自己
+
+- [艾登・莫爾] openspec/specs/protagonist-settings/spec.md:32
+    found 1 歲（source vol1_end=12 歲）
+    context: - **妹妹 莉亞・莫爾**：1歲多（剛會走路），活潑，前世在岱隆衰落後的動亂中失蹤，是主角最深的執念
+
+- [艾登・莫爾] openspec/specs/protagonist-settings/character-card.md:42
+    found 38 歲（source vol1_end=12 歲）
+    context: | 父親 羅爾・莫爾（38歲） | 勤懇老實，主角要保住的第一個人。前世14年後意外去世，本世必須改變 |
+
+- [艾登・莫爾] openspec/specs/protagonist-settings/character-card.md:43
+    found 35 歲（source vol1_end=12 歲）
+    context: | 母親 艾拉・莫爾（35歲） | 精明愛碎念，是主角第一個不自知的情報員 |
+
+- [艾登・莫爾] openspec/specs/protagonist-settings/character-card.md:44
+    found 1 歲（source vol1_end=12 歲）
+    context: | 妹妹 莉亞・莫爾（1歲多） | 前世在動亂中失蹤，是主角最深的執念與底線 |
+
+- [艾登・莫爾] openspec/specs/protagonist-settings/past-life-complete.md:12
+    found 7 歲（source vol1_end=12 歲）
+    context: - 妹妹莉亞比艾登小7歲（艾登14歲離家時莉亞7歲，剛開始上學）
+
+- [艾登・莫爾] openspec/specs/protagonist-settings/past-life-complete.md:12
+    found 14 歲（source vol1_end=12 歲）
+    context: - 妹妹莉亞比艾登小7歲（艾登14歲離家時莉亞7歲，剛開始上學）
+
+- [艾登・莫爾] openspec/specs/protagonist-settings/past-life-complete.md:12
+    found 7 歲（source vol1_end=12 歲）
+    context: - 妹妹莉亞比艾登小7歲（艾登14歲離家時莉亞7歲，剛開始上學）
+
+- [艾登・莫爾] openspec/specs/protagonist-settings/past-life-complete.md:26
+    found 15 歲（source vol1_end=12 歲）
+    context: - 認識了第一個重要的人：**塔利**（前世15歲，比艾登大1歲，也是新兵）
+
+- [艾登・莫爾] openspec/specs/protagonist-settings/past-life-complete.md:26
+    found 1 歲（source vol1_end=12 歲）
+    context: - 認識了第一個重要的人：**塔利**（前世15歲，比艾登大1歲，也是新兵）
+
+- [艾登・莫爾] openspec/specs/supporting-characters/spec.md:6
+    found 15 歲（source vol1_end=12 歲）
+    context: **前世**：在艾登15歲時因一場意外去世，艾登為了養活家人才急著加入邊境軍
+
+- [艾登・莫爾] openspec/specs/supporting-characters/spec.md:47
+    found 14 歲（source vol1_end=12 歲）
+    context: **性格**：活潑、愛哭、對哥哥黏得很（前世艾登14歲就去當兵時妹妹才7歲，沒陪她長大的遺憾）
+
+- [艾登・莫爾] openspec/specs/supporting-characters/spec.md:99
+    found 14 歲（source vol1_end=12 歲）
+    context: - 前世艾登14歲就離開去當兵，兩人沒有交集——這個人在前世是陌生人
+
+- [艾登・莫爾] openspec/specs/supporting-characters/family-cards.md:8
+    found 15 歲（source vol1_end=12 歲）
+    context: - 前世命運：艾登15歲時因貴族包車意外死亡（車軸被動過手腳）
+
+- [艾登・莫爾] openspec/specs/supporting-characters/family-cards.md:65
+    found 14 歲（source vol1_end=12 歲）
+    context: - 對哥哥的黏性：前世艾登14歲離開時莉亞才7歲，沒有陪她長大。本世她每天粘著他
+
+- [艾登・莫爾] openspec/specs/supporting-characters/mera-card.md:17
+    found 14 歲（source vol1_end=12 歲）
+    context: - 艾登14歲離家從軍，梅拉只是塔恩鎮某個鄰居的臉——他甚至不確定她叫什麼名字
+
+- [羅爾・莫爾] openspec/specs/protagonist-settings/spec.md:6
+    found 14 歲（source vol1_end=42 歲）
+    context: - 14歲：父親去世，家道中落，以青少年身份加入邊境軍謀生
+
+- [羅爾・莫爾] openspec/specs/protagonist-settings/past-life-complete.md:14
+    found 14 歲（source vol1_end=42 歲）
+    context: - **14歲那年，父親在一次替貴族運貨途中意外去世**（車軸斷裂，父親從車上摔落）
+
+- [羅爾・莫爾] openspec/specs/supporting-characters/spec.md:5
+    found 8 歲（source vol1_end=42 歲）
+    context: **年齡**：重生時主角8歲，父親38歲
+
+- [羅爾・莫爾] openspec/specs/supporting-characters/spec.md:5
+    found 38 歲（source vol1_end=42 歲）
+    context: **年齡**：重生時主角8歲，父親38歲
+
+- [羅爾・莫爾] openspec/specs/supporting-characters/spec.md:14
+    found 15 歲（source vol1_end=42 歲）
+    context: - 主角的第一個目標：讓父親活過15歲這年（找到讓意外不發生的方法）
+
+- [羅爾・莫爾] openspec/specs/plot-structure/vol1-chapter-outline.md:12
+    found 15 歲（source vol1_end=42 歲）
+    context: 1. 保住父親（在主角15歲前必須完成的前置準備）
+
+- [莉亞・莫爾] openspec/specs/supporting-characters/spec.md:44
+    found 1 歲（source vol1_end=8 歲）
+    context: **年齡**：重生時主角8歲，妹妹1歲多（剛會走路）
+
+- [莉亞・莫爾] openspec/specs/plot-structure/vol45-overview.md:28
+    found 16 歲（source vol1_end=8 歲）
+    context: 主角回塔恩鎮，找到妹妹（約16歲），說：「不管外面發生什麼，保護好爸媽。」她：「你去哪裡？」他沒有回答，只是摸了她的頭，轉身走。她看著他的背影，什麼都沒說。
+
+- [梅拉・索恩] openspec/specs/supporting-characters/spec.md:94
+    found 8 歲（source vol1_end=13 歲）
+    context: **年齡**：重生時主角8歲，梅拉9歲
+
+- [梅拉・索恩] openspec/specs/supporting-characters/spec.md:94
+    found 9 歲（source vol1_end=13 歲）
+    context: **年齡**：重生時主角8歲，梅拉9歲
+
+- [梅拉・索恩] openspec/specs/supporting-characters/mera-card.md:61
+    found 16 歲（source vol1_end=13 歲）
+    context: ### 第二卷（主角12-16歲，梅拉13-17歲）：察覺
+
+- [梅拉・索恩] openspec/specs/supporting-characters/mera-card.md:61
+    found 17 歲（source vol1_end=13 歲）
+    context: ### 第二卷（主角12-16歲，梅拉13-17歲）：察覺
+
+- [梅拉・索恩] openspec/specs/supporting-characters/mera-card.md:75
+    found 19 歲（source vol1_end=13 歲）
+    context: ### 第三卷（主角16-19歲，梅拉17-20歲）：沉默的共識
+
+- [梅拉・索恩] openspec/specs/supporting-characters/mera-card.md:75
+    found 20 歲（source vol1_end=13 歲）
+    context: ### 第三卷（主角16-19歲，梅拉17-20歲）：沉默的共識
+
+- [梅拉・索恩] openspec/specs/supporting-characters/mera-card.md:89
+    found 22 歲（source vol1_end=13 歲）
+    context: ### 第四卷（主角19-22歲，梅拉20-23歲）：等待
+
+- [梅拉・索恩] openspec/specs/supporting-characters/mera-card.md:89
+    found 23 歲（source vol1_end=13 歲）
+    context: ### 第四卷（主角19-22歲，梅拉20-23歲）：等待
+
+- [梅拉・索恩] openspec/specs/supporting-characters/mera-card.md:100
+    found 25 歲（source vol1_end=13 歲）
+    context: ### 第五卷（主角22-25歲，梅拉23-26歲）：家
+
+- [梅拉・索恩] openspec/specs/supporting-characters/mera-card.md:100
+    found 26 歲（source vol1_end=13 歲）
+    context: ### 第五卷（主角22-25歲，梅拉23-26歲）：家
+
+- [安塔・費爾頓] openspec/specs/supporting-characters/spec.md:189
+    found 8 歲（source vol1_end=53 歲）
+    context: **年齡**：重生時主角8歲，安塔公爵49歲
+
+- [安塔・費爾頓] openspec/specs/supporting-characters/spec.md:189
+    found 49 歲（source vol1_end=53 歲）
+    context: **年齡**：重生時主角8歲，安塔公爵49歲
+
+- [安塔・費爾頓] openspec/specs/supporting-characters/spec.md:189
+    found 8 歲（source vol1_end=53 歲）
+    context: **年齡**：重生時主角8歲，安塔公爵49歲
+
+- [安塔・費爾頓] openspec/specs/supporting-characters/spec.md:189
+    found 49 歲（source vol1_end=53 歲）
+    context: **年齡**：重生時主角8歲，安塔公爵49歲
+
+- [安塔・費爾頓] openspec/specs/supporting-characters/antagonist-card.md:64
+    found 10 歲（source vol1_end=53 歲）
+    context: - 年齡：比安塔小10歲，全書約39歲時登場
+
+- [安塔・費爾頓] openspec/specs/supporting-characters/antagonist-card.md:64
+    found 39 歲（source vol1_end=53 歲）
+    context: - 年齡：比安塔小10歲，全書約39歲時登場
+

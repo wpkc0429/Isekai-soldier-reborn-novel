@@ -157,15 +157,26 @@
 
 ---
 
-### Requirement: 章節前置清單
+### Requirement: Chapter Brief（單頁，2026-05-10 起）
 
-**每章開始前確認（2分鐘，不跳過）：**
+> **此 Requirement 替換了原「章節前置清單」與「AI 撰寫工作階段簡報」**——兩者已於 vol1-2026-05 audit P0-1 合併為單一文件 `ai-session-brief.md`。
 
-- [ ] 上一章的「離開狀態」是什麼？本章是否從那個狀態繼續？
-- [ ] 本章涉及哪些角色？他們目前的狀態卡是否已確認？
-- [ ] 有沒有未兌現的伏筆應該在這章推進或兌現？
-- [ ] 本章類型是什麼（行動／佈局／情感）？字數目標？
-- [ ] 這章結束時，讀者應該感受到什麼？
+**每章開寫前填一份 Chapter Brief**，包含：
+- 上半段 Brief：故事時間、上章摘要、本章人物狀態表、本章目的、末尾設計
+- 下半段 7 項硬性確認（含原 pre-chapter-checklist 的確認 1–5 + vol1-optimization 後新增的硬性確認 6/7）
+- 本卷重點提醒（vol1-2026-05 audit top 3 P2 inline）
+- 卷末 sync 必查清單
+
+**章寫完後立即跑 `chapter-sync.md` §A 的 5 題 quick 版**（5 分鐘 reverse-pass）。
+
+### Requirement: Chapter Sync（每章 / 每 10 章；2026-05-10 起）
+
+新增 `chapter-sync.md`：
+- §A 每章 5 分鐘 reverse-pass（5 個固定問題）
+- §B 每 10 章 full sync（5 個基準欄位 + §B.6 開放欄「本次有沒有發現新類型不一致」）
+- §A 累積結果 = §B 的輸入；不分兩個流程
+
+**§B 5 個基準欄位**：人物年齡、班底知情狀態、伏筆編號去重、event-log 待兌現項清理、character-state-cards 增量更新——來自 `openspec/audits/vol1-2026-05/audit.md` §1 vol1-optimization 修補類型統計，非直覺判斷。
 
 ---
 
@@ -201,28 +212,8 @@
 
 ---
 
-### Requirement: AI 撰寫工作階段簡報
+### Requirement: AI 撰寫工作階段簡報（已併入 Chapter Brief）
 
-每次開始新的撰寫 session 時使用。提供以下簡報讓 Claude 快速建立 context：
+> 此 Requirement 已併入上方「Chapter Brief（單頁，2026-05-10 起）」。原獨立的 ai-session-brief 與 pre-chapter-checklist 已合併為單一文件 `ai-session-brief.md`。
 
-```
-## 本次撰寫簡報
-
-**目標章節**：第X章（第N卷）
-**故事時間**：[年份季節]，主角X歲，距石河谷之戰X年
-**章節類型**：[行動／佈局／情感]，目標字數：XXXX字
-
-**上章摘要**（3行以內）：
-[發生了什麼，以什麼狀態結束]
-
-**本章涉及人物及當前狀態**：
-- [人名]：[現在在哪、知道什麼、與主角的關係現況]
-- [人名]：...
-
-**本章目的**：[用一句話說這章要完成什麼]
-
-**需要注意的連貫性事項**：
-- [有沒有前章埋下的伏筆需要在本章推進]
-- [有沒有人物上章說過的話本章需要呼應]
-- [當前故事時間是否影響場景細節（季節、時辰）]
-```
+詳見：[`./ai-session-brief.md`](./ai-session-brief.md)。
